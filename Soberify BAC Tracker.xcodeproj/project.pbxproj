@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E9149812819775300E8C582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149802819775300E8C582 /* AppDelegate.swift */; };
+		6E9149832819775300E8C582 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149822819775300E8C582 /* SceneDelegate.swift */; };
+		6E9149852819775300E8C582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149842819775300E8C582 /* ViewController.swift */; };
+		6E9149882819775300E8C582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9149862819775300E8C582 /* Main.storyboard */; };
+		6E91498B2819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149892819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodeld */; };
+		6E91498D2819775500E8C582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E91498C2819775500E8C582 /* Assets.xcassets */; };
+		6E9149902819775500E8C582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E91498E2819775500E8C582 /* LaunchScreen.storyboard */; };
+		6E91499B2819775500E8C582 /* Soberify_BAC_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91499A2819775500E8C582 /* Soberify_BAC_TrackerTests.swift */; };
+		6E9149A52819775500E8C582 /* Soberify_BAC_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149A42819775500E8C582 /* Soberify_BAC_TrackerUITests.swift */; };
+		6E9149A72819775500E8C582 /* Soberify_BAC_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149A62819775500E8C582 /* Soberify_BAC_TrackerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E9149972819775500E8C582 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9149752819775300E8C582 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E91497C2819775300E8C582;
+			remoteInfo = "Soberify BAC Tracker";
+		};
+		6E9149A12819775500E8C582 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9149752819775300E8C582 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E91497C2819775300E8C582;
+			remoteInfo = "Soberify BAC Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E91497D2819775300E8C582 /* Soberify BAC Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Soberify BAC Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E9149802819775300E8C582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E9149822819775300E8C582 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6E9149842819775300E8C582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E9149872819775300E8C582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E91498A2819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Soberify_BAC_Tracker.xcdatamodel; sourceTree = "<group>"; };
+		6E91498C2819775500E8C582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E91498F2819775500E8C582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E9149912819775500E8C582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E9149962819775500E8C582 /* Soberify BAC TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Soberify BAC TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E91499A2819775500E8C582 /* Soberify_BAC_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soberify_BAC_TrackerTests.swift; sourceTree = "<group>"; };
+		6E9149A02819775500E8C582 /* Soberify BAC TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Soberify BAC TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E9149A42819775500E8C582 /* Soberify_BAC_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soberify_BAC_TrackerUITests.swift; sourceTree = "<group>"; };
+		6E9149A62819775500E8C582 /* Soberify_BAC_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soberify_BAC_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E91497A2819775300E8C582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E9149932819775500E8C582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E91499D2819775500E8C582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E9149742819775300E8C582 = {
+			isa = PBXGroup;
+			children = (
+				6E91497F2819775300E8C582 /* Soberify BAC Tracker */,
+				6E9149992819775500E8C582 /* Soberify BAC TrackerTests */,
+				6E9149A32819775500E8C582 /* Soberify BAC TrackerUITests */,
+				6E91497E2819775300E8C582 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E91497E2819775300E8C582 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E91497D2819775300E8C582 /* Soberify BAC Tracker.app */,
+				6E9149962819775500E8C582 /* Soberify BAC TrackerTests.xctest */,
+				6E9149A02819775500E8C582 /* Soberify BAC TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E91497F2819775300E8C582 /* Soberify BAC Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				6E9149802819775300E8C582 /* AppDelegate.swift */,
+				6E9149822819775300E8C582 /* SceneDelegate.swift */,
+				6E9149842819775300E8C582 /* ViewController.swift */,
+				6E9149862819775300E8C582 /* Main.storyboard */,
+				6E91498C2819775500E8C582 /* Assets.xcassets */,
+				6E91498E2819775500E8C582 /* LaunchScreen.storyboard */,
+				6E9149912819775500E8C582 /* Info.plist */,
+				6E9149892819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodeld */,
+			);
+			path = "Soberify BAC Tracker";
+			sourceTree = "<group>";
+		};
+		6E9149992819775500E8C582 /* Soberify BAC TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E91499A2819775500E8C582 /* Soberify_BAC_TrackerTests.swift */,
+			);
+			path = "Soberify BAC TrackerTests";
+			sourceTree = "<group>";
+		};
+		6E9149A32819775500E8C582 /* Soberify BAC TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E9149A42819775500E8C582 /* Soberify_BAC_TrackerUITests.swift */,
+				6E9149A62819775500E8C582 /* Soberify_BAC_TrackerUITestsLaunchTests.swift */,
+			);
+			path = "Soberify BAC TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E91497C2819775300E8C582 /* Soberify BAC Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E9149AA2819775500E8C582 /* Build configuration list for PBXNativeTarget "Soberify BAC Tracker" */;
+			buildPhases = (
+				6E9149792819775300E8C582 /* Sources */,
+				6E91497A2819775300E8C582 /* Frameworks */,
+				6E91497B2819775300E8C582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Soberify BAC Tracker";
+			productName = "Soberify BAC Tracker";
+			productReference = 6E91497D2819775300E8C582 /* Soberify BAC Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E9149952819775500E8C582 /* Soberify BAC TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E9149AD2819775500E8C582 /* Build configuration list for PBXNativeTarget "Soberify BAC TrackerTests" */;
+			buildPhases = (
+				6E9149922819775500E8C582 /* Sources */,
+				6E9149932819775500E8C582 /* Frameworks */,
+				6E9149942819775500E8C582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E9149982819775500E8C582 /* PBXTargetDependency */,
+			);
+			name = "Soberify BAC TrackerTests";
+			productName = "Soberify BAC TrackerTests";
+			productReference = 6E9149962819775500E8C582 /* Soberify BAC TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E91499F2819775500E8C582 /* Soberify BAC TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E9149B02819775500E8C582 /* Build configuration list for PBXNativeTarget "Soberify BAC TrackerUITests" */;
+			buildPhases = (
+				6E91499C2819775500E8C582 /* Sources */,
+				6E91499D2819775500E8C582 /* Frameworks */,
+				6E91499E2819775500E8C582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E9149A22819775500E8C582 /* PBXTargetDependency */,
+			);
+			name = "Soberify BAC TrackerUITests";
+			productName = "Soberify BAC TrackerUITests";
+			productReference = 6E9149A02819775500E8C582 /* Soberify BAC TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E9149752819775300E8C582 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					6E91497C2819775300E8C582 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					6E9149952819775500E8C582 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 6E91497C2819775300E8C582;
+					};
+					6E91499F2819775500E8C582 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 6E91497C2819775300E8C582;
+					};
+				};
+			};
+			buildConfigurationList = 6E9149782819775300E8C582 /* Build configuration list for PBXProject "Soberify BAC Tracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E9149742819775300E8C582;
+			productRefGroup = 6E91497E2819775300E8C582 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E91497C2819775300E8C582 /* Soberify BAC Tracker */,
+				6E9149952819775500E8C582 /* Soberify BAC TrackerTests */,
+				6E91499F2819775500E8C582 /* Soberify BAC TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E91497B2819775300E8C582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E9149902819775500E8C582 /* LaunchScreen.storyboard in Resources */,
+				6E91498D2819775500E8C582 /* Assets.xcassets in Resources */,
+				6E9149882819775300E8C582 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E9149942819775500E8C582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E91499E2819775500E8C582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E9149792819775300E8C582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E91498B2819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodeld in Sources */,
+				6E9149852819775300E8C582 /* ViewController.swift in Sources */,
+				6E9149812819775300E8C582 /* AppDelegate.swift in Sources */,
+				6E9149832819775300E8C582 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E9149922819775500E8C582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E91499B2819775500E8C582 /* Soberify_BAC_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E91499C2819775500E8C582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E9149A52819775500E8C582 /* Soberify_BAC_TrackerUITests.swift in Sources */,
+				6E9149A72819775500E8C582 /* Soberify_BAC_TrackerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E9149982819775500E8C582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E91497C2819775300E8C582 /* Soberify BAC Tracker */;
+			targetProxy = 6E9149972819775500E8C582 /* PBXContainerItemProxy */;
+		};
+		6E9149A22819775500E8C582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E91497C2819775300E8C582 /* Soberify BAC Tracker */;
+			targetProxy = 6E9149A12819775500E8C582 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E9149862819775300E8C582 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E9149872819775300E8C582 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E91498E2819775500E8C582 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E91498F2819775500E8C582 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E9149A82819775500E8C582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E9149A92819775500E8C582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E9149AB2819775500E8C582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG797UN2G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Soberify BAC Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Noah-Personal.Soberify-BAC-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E9149AC2819775500E8C582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG797UN2G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Soberify BAC Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Noah-Personal.Soberify-BAC-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6E9149AE2819775500E8C582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG797UN2G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Noah-Personal.Soberify-BAC-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soberify BAC Tracker.app/Soberify BAC Tracker";
+			};
+			name = Debug;
+		};
+		6E9149AF2819775500E8C582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG797UN2G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Noah-Personal.Soberify-BAC-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soberify BAC Tracker.app/Soberify BAC Tracker";
+			};
+			name = Release;
+		};
+		6E9149B12819775500E8C582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG797UN2G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Noah-Personal.Soberify-BAC-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Soberify BAC Tracker";
+			};
+			name = Debug;
+		};
+		6E9149B22819775500E8C582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG797UN2G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Noah-Personal.Soberify-BAC-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Soberify BAC Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E9149782819775300E8C582 /* Build configuration list for PBXProject "Soberify BAC Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E9149A82819775500E8C582 /* Debug */,
+				6E9149A92819775500E8C582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E9149AA2819775500E8C582 /* Build configuration list for PBXNativeTarget "Soberify BAC Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E9149AB2819775500E8C582 /* Debug */,
+				6E9149AC2819775500E8C582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E9149AD2819775500E8C582 /* Build configuration list for PBXNativeTarget "Soberify BAC TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E9149AE2819775500E8C582 /* Debug */,
+				6E9149AF2819775500E8C582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E9149B02819775500E8C582 /* Build configuration list for PBXNativeTarget "Soberify BAC TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E9149B12819775500E8C582 /* Debug */,
+				6E9149B22819775500E8C582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6E9149892819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6E91498A2819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodel */,
+			);
+			currentVersion = 6E91498A2819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodel */;
+			path = Soberify_BAC_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6E9149752819775300E8C582 /* Project object */;
+}
