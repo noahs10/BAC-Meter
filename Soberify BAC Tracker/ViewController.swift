@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var bacPercentage: UILabel!
     
     @IBOutlet weak var SoberStatusView: UIView!
     @IBOutlet weak var messageSymbol: UIImageView!
@@ -27,7 +28,11 @@ class ViewController: UIViewController {
         
         AddDrinkButton.isEnabled = true
         
-        // Do any additional setup after loading the view.
+        //bacPercentage Control
+        bacPercentage.text = String(bacValue)
+        
+        
+        //Scale Up progress View
         ProgressView.transform = ProgressView.transform.scaledBy(x: 1, y: 5)
         
         //progressView control
@@ -56,7 +61,7 @@ class ViewController: UIViewController {
 //progress time func
     @objc func setupProgress(){
         if bacValue > 0.0 {
-            bacValue = bacValue - 0.00000417
+            bacValue = bacValue - 0.0001
         }
         
         self.ProgressView.progress = Float(bacValue)
@@ -66,6 +71,9 @@ class ViewController: UIViewController {
         self.changeBarColor()
         self.changeMessage()
         self.disableButton()
+        let roundedBacValue = round(bacValue*100)/1000.0
+        self.bacPercentage.text = String(abs(roundedBacValue)) + "%"
+        print(bacValue)
     }
 // change Color Function
     @objc func changeBarColor(){
@@ -120,9 +128,9 @@ class ViewController: UIViewController {
 //AddDrink Button
 @IBAction func addDrink(_ sender: UIButton) {
     //if butt
-    bacValue = bacValue + 0.01
+    bacValue = bacValue + 0.3
 }
     
-//BAC Value Control
+    
 
 }
