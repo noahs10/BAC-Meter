@@ -14,14 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageSymbol: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
     
-    
     @IBOutlet weak var ProgressView: UIProgressView!
-    private var observation: NSKeyValueObservation?
-    
     @IBOutlet weak var AddDrinkButton: UIButton!
     
-    
-    var bacValue: Float = 1
+    var bacValue: Float = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +50,6 @@ class ViewController: UIViewController {
         messageSymbol.tintColor = UIColor.systemBrown
         
         print(bacValue)
-        
 }
     
 //FUNCTIONS
@@ -63,7 +58,6 @@ class ViewController: UIViewController {
         if bacValue > 0.0 {
             bacValue = bacValue - 0.0001
         }
-        
         self.ProgressView.progress = Float(bacValue)
         if bacValue != 1.0 {
             self.perform(#selector(setupProgress), with: nil, afterDelay: 0.002)
@@ -108,26 +102,31 @@ class ViewController: UIViewController {
                 self.SoberStatusView.layer.borderColor = UIColor.systemBrown.cgColor
                 self.SoberStatusView.layer.backgroundColor = UIColor.systemBackground.cgColor
                 self.messageSymbol.tintColor = UIColor.systemBrown
-                self.view.backgroundColor = UIColor.systemBackground
+                
+                //self.view.backgroundColor = UIColor.systemBackground
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.view.backgroundColor = UIColor.systemBackground})
                 self.messageLabel.text = "You're Good, Drink Responsibly"
             } else if self.bacValue <= 0.8 {
-                self.SoberStatusView.layer.borderColor = UIColor.systemOrange.cgColor
-                self.SoberStatusView.layer.backgroundColor = UIColor.systemBackground.cgColor
-                self.messageSymbol.tintColor = UIColor.systemOrange
-                self.view.backgroundColor = UIColor.systemBackground
+                //Orange View Control
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.SoberStatusView.layer.borderColor = UIColor.systemOrange.cgColor})
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.SoberStatusView.layer.backgroundColor = UIColor.systemBackground.cgColor})
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.messageSymbol.tintColor = UIColor.systemOrange})
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.view.backgroundColor = UIColor.systemBackground})
                 self.messageLabel.text = "Time to Slow Down"
             } else {
-                self.SoberStatusView.layer.borderColor = UIColor.systemPink.cgColor
-                self.SoberStatusView.layer.backgroundColor = UIColor.systemPink.cgColor
-                self.messageSymbol.tintColor = UIColor.white
-                self.view.backgroundColor = UIColor.init(red: 0.65, green: 0.01, blue: 0.10, alpha: 1.0)
+                //Pink View Control
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.SoberStatusView.layer.borderColor = UIColor.systemPink.cgColor})
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.SoberStatusView.layer.backgroundColor = UIColor.systemPink.cgColor})
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.messageSymbol.tintColor = UIColor.white})
+                UIView.animate(withDuration: 1.0, delay: 0.0, animations: {self.view.backgroundColor = UIColor.init(red: 0.65, green: 0.01, blue: 0.10, alpha: 1.0)})
+                //self.view.backgroundColor = UIColor.init(red: 0.65, green: 0.01, blue: 0.10, alpha: 1.0)
                 self.messageLabel.text = "Stop now!"
             }
         }
     }
 //AddDrink Button
 @IBAction func addDrink(_ sender: UIButton) {
-    //if butt
+
     bacValue = bacValue + 0.3
 }
     
