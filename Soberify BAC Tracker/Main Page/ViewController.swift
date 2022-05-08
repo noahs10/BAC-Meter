@@ -7,6 +7,33 @@
 
 import UIKit
 
+// MARK: - User Details Model
+struct Details {
+    let age: Float
+    let gender: String
+    let weight: Float
+    let height: Float
+
+    init(age: Float, gender: String, weight: Float, height: Float){
+        self.age = age
+        self.gender = gender
+        self.weight = weight
+        self.height = height
+    }
+    
+    func calculateTBW() -> Float {
+        var qValue: Float = 0
+        if gender == "male" {
+            qValue = (0.3362*weight) + (0.1074*height) - (0.09516*age) + 2.447
+        } else {
+        qValue = (0.2466*height) + (10.69*height) - 2.447
+        }
+        return qValue
+    }
+}
+
+// MARK: - Main View Controller
+
 class ViewController: UIViewController {
     @IBOutlet weak var bacPercentage: UILabel!
     
@@ -18,6 +45,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var AddDrinkButton: UIButton!
     
     var bacValue: Float = 0
+    var addedBacValue: Float = 0
+    var alcoholVolume: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,26 +77,30 @@ class ViewController: UIViewController {
         //messageSymbol Control
         messageSymbol.image = messageSymbol.image?.withRenderingMode(.alwaysTemplate)
         messageSymbol.tintColor = UIColor.systemBrown
-        
-        print(bacValue)
 }
     
-//FUNCTIONS
+// MARK: - View Controller Function
+    
 //progress time func
     @objc func setupProgress(){
+        
         if bacValue > 0.0 {
-            bacValue = bacValue - 0.0001
+        //subtract 0.015% bac each 0.1 second
+            bacValue = bacValue - 0.00000416
         }
+        //update bacValue value after subtracted
         self.ProgressView.progress = Float(bacValue)
         if bacValue != 1.0 {
-            self.perform(#selector(setupProgress), with: nil, afterDelay: 0.002)
+        //time delay for BAC subtraction. decrease to fast forward
+            self.perform(#selector(setupProgress), with: nil, afterDelay: 0.001)
         }
         self.changeBarColor()
         self.changeMessage()
         self.disableButton()
+        
         let roundedBacValue = round(bacValue*100)/1000.0
         self.bacPercentage.text = String(abs(roundedBacValue)) + "%"
-        print(bacValue)
+
     }
 // change Color Function
     @objc func changeBarColor(){
@@ -124,12 +157,53 @@ class ViewController: UIViewController {
             }
         }
     }
+
+// MARK: - Navigation and Delegation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navVC = segue.destination as? UINavigationController
+        let secondVC = navVC?.viewControllers.first as! AddDrinkViewController
+        secondVC.alcoholDelegate = self
+        
+    }
 //AddDrink Button
 @IBAction func addDrink(_ sender: UIButton) {
-
-    bacValue = bacValue + 0.3
+    
 }
-    
-    
 
 }
+
+extension ViewController: AlcoholDataDelegate {
+    func didTapButton(concentration: Float, volume: Float) {
+        let mass = calculateMass(volume: volume, conc: concentration)
+        
+        //temporary data
+        let userAge:Float = 20.0
+        let userGender:String = "male"
+        let userWeight:Float = 80.0
+        let userHeight:Float = 180
+        
+        //user details instance
+        let user = Details(age: userAge, gender: userGender, weight: userWeight, height: userHeight)
+        
+        //bacCalculation
+        let tbw = user.calculateTBW()
+        addedBacValue = calculateWatson(alcMass: mass, qValue: tbw)
+        print("added bacValue is = \(addedBacValue)")
+        bacValue += (addedBacValue*10)
+
+    }
+    
+    func calculateMass(volume: Float, conc: Float) -> Float {
+        let mass = volume*conc/100*0.789
+        return mass
+    }
+    func calculateWatson(alcMass:Float, qValue: Float) -> Float{
+        let bac = 0.844*alcMass/qValue/10
+        return bac
+    }
+}
+
+
+
+
