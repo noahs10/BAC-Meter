@@ -23,10 +23,10 @@ struct Details {
     
     func calculateTBW() -> Float {
         var qValue: Float = 0
-        if gender == "male" {
+        if gender == "Male" {
             qValue = (0.3362*weight) + (0.1074*height) - (0.09516*age) + 2.447
         } else {
-        qValue = (0.2466*height) + (10.69*height) - 2.447
+            qValue = (0.2466*weight) + (0.1069*height) - 2.097
         }
         return qValue
     }
@@ -36,7 +36,7 @@ struct Details {
 
 class ViewController: UIViewController {
     @IBOutlet weak var bacPercentage: UILabel!
-    
+    @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var SoberStatusView: UIView!
     @IBOutlet weak var messageSymbol: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
@@ -48,8 +48,28 @@ class ViewController: UIViewController {
     var addedBacValue: Float = 0
     var alcoholVolume: Int = 0
     
+    var userAge:Float = 0
+    var userSex:String = ""
+    var userWeight:Float = 0
+    var userHeight:Float = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        undoButton.isEnabled = false
+        
+        if let value = UserDefaultManager.shared.defaults.value(forKey: "age") as? Float {
+            userAge = Float(value)
+        }
+        if let value = UserDefaultManager.shared.defaults.value(forKey: "sex") as? String {
+            userSex = value
+        }
+        if let value = UserDefaultManager.shared.defaults.value(forKey: "height") as? Float {
+            userHeight = Float(value)
+        }
+        if let value = UserDefaultManager.shared.defaults.value(forKey: "weight") as? Float {
+            userWeight = Float(value)
+        }
         
         AddDrinkButton.isEnabled = true
         
@@ -84,7 +104,7 @@ class ViewController: UIViewController {
 //progress time func
     @objc func setupProgress(){
         
-        if bacValue > 0.0 {
+        if bacValue >= 0.0 {
         //subtract 0.015% bac each 0.1 second
             bacValue = bacValue - 0.00000416
         }
@@ -99,7 +119,13 @@ class ViewController: UIViewController {
         self.disableButton()
         
         let roundedBacValue = round(bacValue*100)/1000.0
-        self.bacPercentage.text = String(abs(roundedBacValue)) + "%"
+        
+        if bacValue < 0 {
+            self.bacPercentage.text = "0.000%"
+        } else {
+            self.bacPercentage.text = String(abs(roundedBacValue)) + "%"
+        }
+        
 
     }
 // change Color Function
@@ -171,27 +197,31 @@ class ViewController: UIViewController {
     
 }
 
+    
+
+    @IBAction func undoAddDrink(_ sender: Any) {
+        
+        bacValue -= (addedBacValue*10)
+        undoButton.isEnabled = false
+    }
 }
+
+
+
 
 extension ViewController: AlcoholDataDelegate {
     func didTapButton(concentration: Float, volume: Float) {
         let mass = calculateMass(volume: volume, conc: concentration)
-        
-        //temporary data
-        let userAge:Float = 20.0
-        let userGender:String = "male"
-        let userWeight:Float = 80.0
-        let userHeight:Float = 180
-        
-        //user details instance
-        let user = Details(age: userAge, gender: userGender, weight: userWeight, height: userHeight)
+    
+        let user = Details(age: userAge, gender: userSex, weight: userWeight, height: userHeight)
         
         //bacCalculation
         let tbw = user.calculateTBW()
         addedBacValue = calculateWatson(alcMass: mass, qValue: tbw)
+        print("total body water is = \(tbw)")
         print("added bacValue is = \(addedBacValue)")
         bacValue += (addedBacValue*10)
-
+        undoButton.isEnabled = true
     }
     
     func calculateMass(volume: Float, conc: Float) -> Float {

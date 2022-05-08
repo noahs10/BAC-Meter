@@ -12,8 +12,6 @@
 		6E3A1875281E8F980051919F /* AddDrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3A1873281E8F980051919F /* AddDrinkTableViewCell.xib */; };
 		6E4E4158281A413E00890609 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E4157281A413E00890609 /* DetailsViewController.swift */; };
 		6E4E415A281A415800890609 /* DetailsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E4159281A415800890609 /* DetailsEditViewController.swift */; };
-		6E4E415C281A418200890609 /* GenderChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E415B281A418200890609 /* GenderChangeViewController.swift */; };
-		6E4E4162281A4A9B00890609 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E4161281A4A9B00890609 /* Details.swift */; };
 		6E9149812819775300E8C582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149802819775300E8C582 /* AppDelegate.swift */; };
 		6E9149832819775300E8C582 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149822819775300E8C582 /* SceneDelegate.swift */; };
 		6E9149852819775300E8C582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9149842819775300E8C582 /* ViewController.swift */; };
@@ -51,8 +49,6 @@
 		6E3A1873281E8F980051919F /* AddDrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDrinkTableViewCell.xib; sourceTree = "<group>"; };
 		6E4E4157281A413E00890609 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		6E4E4159281A415800890609 /* DetailsEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsEditViewController.swift; sourceTree = "<group>"; };
-		6E4E415B281A418200890609 /* GenderChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderChangeViewController.swift; sourceTree = "<group>"; };
-		6E4E4161281A4A9B00890609 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		6E91497D2819775300E8C582 /* Soberify BAC Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Soberify BAC Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9149802819775300E8C582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E9149822819775300E8C582 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,8 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				6E4E4157281A413E00890609 /* DetailsViewController.swift */,
-				6E4E415B281A418200890609 /* GenderChangeViewController.swift */,
-				6E4E4161281A4A9B00890609 /* Details.swift */,
 				6E4E4159281A415800890609 /* DetailsEditViewController.swift */,
 			);
 			path = Details;
@@ -316,11 +310,9 @@
 			files = (
 				6E91498B2819775300E8C582 /* Soberify_BAC_Tracker.xcdatamodeld in Sources */,
 				6E3A1868281D89B40051919F /* AddDrinkViewController.swift in Sources */,
-				6E4E415C281A418200890609 /* GenderChangeViewController.swift in Sources */,
 				6E4E415A281A415800890609 /* DetailsEditViewController.swift in Sources */,
 				6E9149852819775300E8C582 /* ViewController.swift in Sources */,
 				6E9149812819775300E8C582 /* AppDelegate.swift in Sources */,
-				6E4E4162281A4A9B00890609 /* Details.swift in Sources */,
 				6E9149832819775300E8C582 /* SceneDelegate.swift in Sources */,
 				6E3A1874281E8F980051919F /* AddDrinkTableViewCell.swift in Sources */,
 				6E4E4158281A413E00890609 /* DetailsViewController.swift in Sources */,
