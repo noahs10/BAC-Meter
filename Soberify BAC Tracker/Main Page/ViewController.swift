@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 // MARK: - User Details Model
 struct Details {
@@ -81,10 +82,10 @@ class ViewController: UIViewController {
         ProgressView.transform = ProgressView.transform.scaledBy(x: 1, y: 5)
         
         //progressView control
-        self.perform(#selector(setupProgress), with: nil, afterDelay: 1)
+        self.perform(#selector(setupProgress), with: nil, afterDelay: 0)
         
-        //progress View Color Change
-        self.perform(#selector(setupProgress), with: nil, afterDelay: 1)
+//        //progress View Color Change
+//        self.perform(#selector(setupProgress), with: nil, afterDelay: 1)
         
        // ProgressView.progressTintColor = progressColor
         
@@ -194,7 +195,7 @@ class ViewController: UIViewController {
     }
 //AddDrink Button
 @IBAction func addDrink(_ sender: UIButton) {
-    
+    HapticsManager.shared.vibrate(for: .warning)
 }
 
     
@@ -202,6 +203,7 @@ class ViewController: UIViewController {
     @IBAction func undoAddDrink(_ sender: Any) {
         
         bacValue -= (addedBacValue*10)
+        HapticsManager.shared.vibrate(for: .error)
         undoButton.isEnabled = false
     }
 }
@@ -220,7 +222,14 @@ extension ViewController: AlcoholDataDelegate {
         addedBacValue = calculateWatson(alcMass: mass, qValue: tbw)
         print("total body water is = \(tbw)")
         print("added bacValue is = \(addedBacValue)")
+        print("current bacValue is = \(bacValue)")
         bacValue += (addedBacValue*10)
+        if bacValue > 0.8 {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            print("haptics played")
+        } else {
+            HapticsManager.shared.vibrate(for: .success)
+        }
         undoButton.isEnabled = true
     }
     

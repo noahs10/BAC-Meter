@@ -74,11 +74,11 @@ class AddDrinkViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func confirmAddDrink(_ sender: Any) {
         
-
-
         if self.alcoholDelegate != nil {
             self.alcoholDelegate?.didTapButton(concentration: alcoholPercent ?? 0, volume: alcoholVolume)
         }
+        
+        SoundManager.shared.playBurp()
         
         dismiss(animated: true, completion: nil)
         

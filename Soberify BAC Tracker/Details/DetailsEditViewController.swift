@@ -101,7 +101,7 @@ class DetailsEditViewController: UITableViewController, UITextFieldDelegate {
         }
         
 
-        
+        HapticsManager.shared.vibrate(for: .success)
         dismiss(animated: true, completion: nil)
     }
 
